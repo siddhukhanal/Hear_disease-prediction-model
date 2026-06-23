@@ -1,9 +1,11 @@
+import os
 import streamlit as st
 import pandas as pd
 import joblib
 
-
-model = joblib.load("KNN_heart_disease.pkl")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "KNN_heart_disease.pkl")
+model = joblib.load(model_path)
 scaler = joblib.load("scaler.pkl")
 expected_columns = joblib.load("columns.pkl")
 
