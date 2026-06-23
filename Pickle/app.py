@@ -10,7 +10,9 @@ model = joblib.load(model_path)
 
 scaler_path = os.path.join(BASE_DIR, "scaler.pkl")
 scaler = joblib.load(scaler_path)
-expected_columns = joblib.load("columns.pkl")
+
+columns_path = os.path.join(BASE_DIR, "columns.pkl")
+expected_columns = joblib.load(columns_path)
 
 
 st.title("Heart Disease prediction")
