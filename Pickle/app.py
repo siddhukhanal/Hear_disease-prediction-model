@@ -5,8 +5,11 @@ import joblib
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(BASE_DIR, "KNN_heart_disease.pkl")
+
 model = joblib.load(model_path)
-scaler = joblib.load("scaler.pkl")
+
+scaler_path = os.path.join(BASE_DIR, "scaler.pkl")
+scaler = joblib.load(scaler_path)
 expected_columns = joblib.load("columns.pkl")
 
 
